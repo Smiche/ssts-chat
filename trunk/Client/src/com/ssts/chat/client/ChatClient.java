@@ -65,7 +65,7 @@ public class ChatClient extends JFrame implements ActionListener{
 	public ChatClient(){		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(250,200,619,428);
-		setTitle("SSTS Чат");
+		setTitle("SSTS Г—Г ГІ");
 		getContentPane().setLayout(null);
 		
 		
@@ -76,7 +76,7 @@ public class ChatClient extends JFrame implements ActionListener{
 		getContentPane().add(tabbedPane); 
 		
 		JPanel panel = new JPanel();
-		tabbedPane.addTab("Чат", panel);
+		tabbedPane.addTab("Г—Г ГІ", panel);
 		panel.setLayout(null);
 		btnIzprati.setBounds(360, 334, 89, 23);
 		panel.add(btnIzprati);
@@ -94,7 +94,7 @@ public class ChatClient extends JFrame implements ActionListener{
 			    	 input = textArea_1.getText();
 			    	 if(!input.isEmpty()){
 			    	 if(nickSet == false){
-			    		 textArea.setText("Сложете си ник от настройките, за да можете да чатите!");
+			    		 textArea.setText("Г‘Г«Г®Г¦ГҐГІГҐ Г±ГЁ Г­ГЁГЄ Г®ГІ Г­Г Г±ГІГ°Г®Г©ГЄГЁГІГҐ, Г§Г  Г¤Г  Г¬Г®Г¦ГҐГІГҐ Г¤Г  Г·Г ГІГЁГІГҐ!");
 			    	 }	
 			    	 if(nickSet){
 			    		try {
@@ -121,7 +121,7 @@ public class ChatClient extends JFrame implements ActionListener{
 		textArea.setEditable(false);
 		textArea.setOpaque(true);
 		textArea.setContentType("text/html");
-		textArea.setText("Сложете си ник от настройките, за да можете да чатите!");
+		textArea.setText("Г‘Г«Г®Г¦ГҐГІГҐ Г±ГЁ Г­ГЁГЄ Г®ГІ Г­Г Г±ГІГ°Г®Г©ГЄГЁГІГҐ, Г§Г  Г¤Г  Г¬Г®Г¦ГҐГІГҐ Г¤Г  Г·Г ГІГЁГІГҐ!");
 		
 		final JScrollPane scrollPane = new JScrollPane(textArea);
 		scrollPane.setBounds(0, 0, 477, 309);
@@ -135,7 +135,7 @@ public class ChatClient extends JFrame implements ActionListener{
 				input = textArea_1.getText();
 				if(!input.isEmpty()){
 		    	 if(nickSet == false){
-		    		 textArea.setText("Сложете си ник от настройките, за да можете да чатите!");
+		    		 textArea.setText("Г‘Г«Г®Г¦ГҐГІГҐ Г±ГЁ Г­ГЁГЄ Г®ГІ Г­Г Г±ГІГ°Г®Г©ГЄГЁГІГҐ, Г§Г  Г¤Г  Г¬Г®Г¦ГҐГІГҐ Г¤Г  Г·Г ГІГЁГІГҐ!");
 		    	 } else {
 		    		 try {
 						sendToServer(input);
@@ -165,7 +165,7 @@ public class ChatClient extends JFrame implements ActionListener{
 		panel.add(scrollPane3);
 		
 		JPanel panel_1 = new JPanel();
-		tabbedPane.addTab("Настройки", null, panel_1, null);
+		tabbedPane.addTab("ГЌГ Г±ГІГ°Г®Г©ГЄГЁ", null, panel_1, null);
 		panel_1.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("\u041D\u0438\u043A:");
@@ -267,7 +267,7 @@ public class ChatClient extends JFrame implements ActionListener{
         		log.add("<br><span style=color:white>"+handleSmiles(wrapText(message,false))+"</span></br>");
         	}
         	  if(!SysTray.frame.isVisible())
-        	  SysTray.icon.displayMessage("Съобщение!", "Кликни тук :)",
+        	  SysTray.icon.displayMessage("Г‘ГєГ®ГЎГ№ГҐГ­ГЁГҐ!", "ГЉГ«ГЁГЄГ­ГЁ ГІГіГЄ :)",
         	            TrayIcon.MessageType.INFO);
         	  printMessages(log);
         	   playSound("bing.wav");
@@ -310,7 +310,7 @@ public class ChatClient extends JFrame implements ActionListener{
 		      public void run() {
 		        try {
 		          Clip clip = AudioSystem.getClip();
-		          AudioInputStream inputStream = AudioSystem.getAudioInputStream(ChatClient.class.getResourceAsStream("resources/" + url));
+		          AudioInputStream inputStream = AudioSystem.getAudioInputStream(ChatClient.class.getResourceAsStream("/resources/" + url));
 		          clip.open(inputStream);
 		          clip.start(); 
 		        } catch (Exception e) {
