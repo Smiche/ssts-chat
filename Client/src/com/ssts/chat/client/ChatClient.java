@@ -344,17 +344,17 @@ public class ChatClient extends JFrame implements ActionListener{
 				if(!nicks.get(i).startsWith("<a>") && !nicks.get(i).startsWith("<m>")){
 				nickList+="<br><font size=5 color=green>"+nicks.get(i)+"</font></br>";
 				} else if(nicks.get(i).startsWith("<m>")){
-					nickList+="<br><img src=\""+ChatClient.class.getResource("resources/muted.png")+ "\"><font size=5 color=black>"+nicks.get(i).substring(3,nicks.get(i).length())+"</font></br>";
+					nickList+="<br><img src=\""+ChatClient.class.getResource("/resources/muted.png")+ "\"><font size=5 color=black>"+nicks.get(i).substring(3,nicks.get(i).length())+"</font></br>";
 				}else{
-					nickList+="<br><img src=\""+ChatClient.class.getResource("resources/admin.png")+ "\"><font size=5 color=red>"+nicks.get(i).substring(3,nicks.get(i).length())+"</font></br>";
+					nickList+="<br><img src=\""+ChatClient.class.getResource("/resources/admin.png")+ "\"><font size=5 color=red>"+nicks.get(i).substring(3,nicks.get(i).length())+"</font></br>";
 				}
 				} else {
 					if(!nicks.get(i).startsWith("<a>") && !nicks.get(i).startsWith("<m>")){
 						nickList+="<font size=5 color=green>"+nicks.get(i)+"</font>";
 						} else if(nicks.get(i).startsWith("<m>")){
-							nickList+="<img src=\""+ChatClient.class.getResource("resources/muted.png")+ "\"><font size=5 color=black>"+nicks.get(i).substring(3,nicks.get(i).length())+"</font>";
+							nickList+="<img src=\""+ChatClient.class.getResource("/resources/muted.png")+ "\"><font size=5 color=black>"+nicks.get(i).substring(3,nicks.get(i).length())+"</font>";
 						} else {
-							nickList+="<img src=\""+ChatClient.class.getResource("resources/admin.png")+ "\"><font size=5 color=red>"+nicks.get(i).substring(3,nicks.get(i).length())+"</font>";
+							nickList+="<img src=\""+ChatClient.class.getResource("/resources/admin.png")+ "\"><font size=5 color=red>"+nicks.get(i).substring(3,nicks.get(i).length())+"</font>";
 						}
 				}
 			}
@@ -412,12 +412,12 @@ public class ChatClient extends JFrame implements ActionListener{
 		    	           }
 			}
 			public static String handleSmiles(String text){
-				text = text.replaceAll("\\:\\)","<img src=\""+ChatClient.class.getResource("resources/smiles/icon_smile.gif")+ "\">");
-				text = text.replaceAll("\\:\\(","<img src=\""+ChatClient.class.getResource("resources/smiles/icon_sad.gif")+ "\">");
-				text = text.replaceAll("\\:\\|","<img src=\""+ChatClient.class.getResource("resources/smiles/icon_neutral.gif")+ "\">");
-				text = text.replaceAll("\\:D","<img src=\""+ChatClient.class.getResource("resources/smiles/icon_biggrin.gif")+ "\">");
-				text = text.replaceAll("\\:S","<img src=\""+ChatClient.class.getResource("resources/smiles/icon_confused.gif")+ "\">");
-				text = text.replaceAll("\\:P","<img src=\""+ChatClient.class.getResource("resources/smiles/icon_razz.gif")+ "\">");
+				text = text.replaceAll("\\:\\)","<img src=\""+ChatClient.class.getResource("/resources/smiles/icon_smile.gif")+ "\">");
+				text = text.replaceAll("\\:\\(","<img src=\""+ChatClient.class.getResource("/resources/smiles/icon_sad.gif")+ "\">");
+				text = text.replaceAll("\\:\\|","<img src=\""+ChatClient.class.getResource("/resources/smiles/icon_neutral.gif")+ "\">");
+				text = text.replaceAll("\\:D","<img src=\""+ChatClient.class.getResource("/resources/smiles/icon_biggrin.gif")+ "\">");
+				text = text.replaceAll("\\:S","<img src=\""+ChatClient.class.getResource("/resources/smiles/icon_confused.gif")+ "\">");
+				text = text.replaceAll("\\:P","<img src=\""+ChatClient.class.getResource("/resources/smiles/icon_razz.gif")+ "\">");
 				return text;
 				
 			}
